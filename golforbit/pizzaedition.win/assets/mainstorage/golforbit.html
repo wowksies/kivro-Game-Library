@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from pizzaedition.win/assets/mainstorage/golforbit.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 24 Oct 2025 19:53:24 GMT -->
+<head>
+    <link rel="icon" type="image/x-icon" href="../../images/pizzalogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pizza Edition</title>
+    <link id="favicon" rel="icon" href="../../jsload/favicon.js" type="image/x-icon">
+    <script src="../../jsload/favicon.js"></script>
+    
+    <script src="../../jsload/confirmation.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/fullg.css">
+</head>
+<body>
+    <div class="embed-container">
+
+        <div id="overlay">
+            <img src="../../images/games/golforbit-min.jpg" alt="Play Image">
+            <div class="overlay-content">
+                <div class="game-title">Golf Orbit</div>
+                <div class="developer-info">BY: Creator</div>
+                <button id="play-btn">Play Now!</button>
+            </div>
+        </div>
+        <iframe id="embed-frame" src="#"></iframe>
+        </div>
+    </div>
+    <script>
+        document.getElementById('play-btn').addEventListener('click', function() {
+            const iframe = document.getElementById('embed-frame');
+            iframe.src = "https://pizzaedition.win/assets/allgames/golforbit/"; 
+            document.getElementById('overlay').style.display = 'none'; 
+        });
+
+
+    </script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8be41b6e10e9479099c99f86c64d1a12","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
