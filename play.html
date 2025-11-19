@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>CNM Game Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { background: #0f0f10; }
+  </style>
+</head>
+
+<body class="text-gray-100">
+
+  <!-- Top Bar -->
+  <div class="p-4 bg-gray-900 fixed top-0 left-0 w-full flex justify-between items-center z-50 shadow-xl">
+    <button onclick="goBack()" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg">
+      ⬅ Back
+    </button>
+
+    <h1 id="title" class="font-bold text-purple-300"></h1>
+
+    <button onclick="panic()" class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-bold">
+      PANIC
+    </button>
+  </div>
+
+  <!-- Game Frame -->
+  <div class="w-full h-[calc(100vh-64px)] pt-16">
+    <iframe id="game" class="w-full h-full border-none" src=""></iframe>
+  </div>
+
+<script>
+  function goBack() {
+    window.location.href = "index.html";
+  }
+
+  function panic() {
+    window.location.href = "https://classroom.google.com";
+  }
+
+  // Read URL and Title from query parameters
+  const params = new URLSearchParams(window.location.search);
+  const url = params.get("url");
+  const title = params.get("title");
+
+  document.getElementById("title").textContent = title || "Game";
+  document.getElementById("game").src = url;
+</script>
+
+</body>
+</html>
+
